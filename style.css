@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  border: 2px solid #FD51AF;
+  border-radius: 4px;
+  line-height: 24px;
+  font-size: 18px;
+}
+
+input:focus {
+  outline: #B00265;
+}
+
+.required {
+  font-size: 1.2em;
+  color: #06B000;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.form-row.inline {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.send-btn {
+  background: #06B000;
+  color: #fff;
+  padding: 10px 0;
+  border-color: #068400;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background: #08A800;
+}
+
+.clear-btn {
+  background: #d65fa2;
+  color: #fff;
+  padding: 10px 0;
+  border-color: #B00060;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #cd5097;
+}
+
+label[for="phone"] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label[for="phone"] i {
+  cursor: pointer;
+}
