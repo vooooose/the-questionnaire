@@ -77,12 +77,12 @@ ul li:not(:last-child) {
 }
 
 .last-cat-container {
+    display: block;
     background-color: rgba(236, 187, 53, 0.4);
     border: 1px solid #b07302;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    text-transform: capitalize;
     opacity: 0;
     visibility: hidden;
 }

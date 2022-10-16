@@ -77,6 +77,10 @@ catsBtn.addEventListener("click", function() {
             return result.json();
         })
         .then((cats) => {
+            if (cats == 0) {
+                allCatsContainer.textContent = "Нет котиков 😿";
+            }
+
             cats.forEach((cat) => {
                 const item = document.createElement("li");
                 item.textContent = `${cat.name}`;
@@ -102,9 +106,9 @@ lastCatBtn.addEventListener("click", function() {
         })
         .then((cat) => {
             if (cat.name === undefined) {
-                return lastCatName.textContent = `Тут не было котиков`;
+                lastCatName.textContent = `Тут не было котиков`;
             } else {
-                return lastCatName.textContent = `${cat.name}`;
+                lastCatName.textContent = `${cat.name}`;
             }
         })
 
