@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <title>Анкета</title>
-  </head>
-  <body>
-    <div>
-      <h1>✨Анкета✨</h1>
-      <form class="form">
-        <div class="form-row">
-          <label for="name">Имя <span class="required">*</span></label>
-          <input type="text" id="name" name="name" required />
+</head>
+
+<body>
+    <div class="container">
+        <div class="all-cats">
+            <button id="cats-btn" class="catsButton">Все котики</button>
+            <ul id="cats" class="cats-container"></ul>
         </div>
-        <div class="form-row">
-          <label for="secondName"
-            >Фамилия <span class="required">*</span></label
-          >
-          <input type="text" id="secondName" name="secondName" required />
+        <div>
+            <h1>🐱Анкета🐱</h1>
+            <form class="form">
+                <div class="form-row">
+                    <label for="name">Имя котика <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div class="form-row">
+                    <label for="ownersName">Имя хозяина <span class="required">*</span></label>
+                    <input type="text" id="ownersName" name="ownersName" required />
+                </div>
+                <div class="form-row">
+                    <label for="email">Email хозяина <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-row">
+                    <label for="phone">
+                <span>Телефон хозяина <span class="required">*</span></span>
+                <i
+                  class="fa-regular fa-circle-question"
+                  title="Формат: 7 XXX XXX XX XX"
+                ></i>
+              </label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required />
+                </div>
+                <div class="form-row inline">
+                    <label for="agree">Я согласна на обработку персональных данных
+                <span class="required">*</span>
+              </label>
+                    <input type="checkbox" id="agree" name="agree" required />
+                </div>
+                <div class="controls">
+                    <input id="button" class="send-btn" type="submit" value="Отправить" />
+                    <input id="clear" class="clear-btn" type="reset" value="Очистить" />
+                </div>
+            </form>
         </div>
-        <div class="form-row">
-          <label for="email">Email <span class="required">*</span></label>
-          <input type="email" id="email" name="email" required />
+        <div class="last-cat">
+            <button id="last-cat-btn" class="catsButton">Последний котик</button>
+            <p id="last-cat-name" class="last-cat-container"></p>
         </div>
-        <div class="form-row">
-          <label for="phone">
-            <span>Телефон <span class="required">*</span></span>
-            <i
-              class="fa-regular fa-circle-question"
-              title="Формат: 7 XXX XXX XX XX"
-            ></i>
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            pattern="[0-9]{11}"
-            required
-          />
-        </div>
-        <div class="form-row inline">
-          <label for="agree"
-            >Я согласна на обработку персональных данных
-            <span class="required">*</span>
-          </label>
-          <input type="checkbox" id="agree" name="agree" required />
-        </div>
-        <div class="controls">
-          <input id="button" class="send-btn" type="submit" value="Отправить" />
-          <input id="clear" class="clear-btn" type="reset" value="Очистить" />
-        </div>
-      </form>
+    </div>
+    <div id="congratulation" class=" hidden">
+        <div class="animation animation--1"></div>
+        <div class="animation animation--2"></div>
+        <div class="animation animation--3"></div>
+        <div class="message message--success"></div>
+    </div>
+    <div id="failure" class="hidden">
+        <div class="animation animation--4"></div>
+        <div class="message message--fail"></div>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
