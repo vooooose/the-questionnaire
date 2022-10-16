@@ -1,92 +1,256 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
-
 * {
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
-  margin-top: 0;
+    margin-top: 0;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container {
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 80px;
+}
+
+.catsButton {
+    padding: 15px;
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease 0s;
+}
+
+.catsButton:hover {
+    box-shadow: 8px 8px 18px -10px rgba(66, 68, 90, 1);
+}
+
+.all-cats,
+.last-cat {
+    align-self: flex-start;
+    padding-top: 50px;
+    width: calc((100% - 2 * 80px) / 3);
+}
+
+.all-cats button {
+    background-color: #e67f90;
+    border: 2px solid #6e0234;
+}
+
+.cats-container {
+    background-color: rgba(230, 127, 144, 0.3);
+    border: 1px solid #6e0234;
+    border-radius: 10px;
+    padding: 10px;
+    max-height: 100vh;
+    column-count: 3;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.all-cats ul li::before,
+.last-cat p::before {
+    content: "🐾";
+    margin-right: 5px;
+}
+
+ul li {
+    list-style: none;
+    text-transform: capitalize;
+}
+
+ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.last-cat button {
+    background-color: #ecbb35;
+    border: 2px solid #b99009;
+}
+
+.last-cat-container {
+    display: block;
+    background-color: rgba(236, 187, 53, 0.4);
+    border: 1px solid #b07302;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: 0;
+    visibility: hidden;
 }
 
 input {
-  border: 2px solid #FD51AF;
-  border-radius: 4px;
-  line-height: 24px;
-  font-size: 18px;
+    border: 2px solid #e08419;
+    border-radius: 4px;
+    line-height: 24px;
+    font-size: 18px;
 }
 
 input:focus {
-  outline: #B00265;
+    outline: #b07302;
 }
 
 .required {
-  font-size: 1.2em;
-  color: #06B000;
+    font-size: 1.2em;
+    color: #06B000;
 }
 
 .form {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
 }
 
 .form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
 .form-row.inline {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .controls {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .send-btn {
-  background: #06B000;
-  color: #fff;
-  padding: 10px 0;
-  border-color: #068400;
-  cursor: pointer;
+    background-color: #c956d3;
+    color: #fff;
+    padding: 10px 0;
+    border-color: #5a0084;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
 }
 
 .send-btn:hover {
-  background: #08A800;
+    background-color: #c530c5;
 }
 
 .clear-btn {
-  background: #d65fa2;
-  color: #fff;
-  padding: 10px 0;
-  border-color: #B00060;
-  cursor: pointer;
+    background-color: #5fc8d6;
+    color: #fff;
+    padding: 10px 0;
+    border-color: #008db0;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
 }
 
 .clear-btn:hover {
-  background: #cd5097;
+    background-color: #50b0cd;
 }
 
 label[for="phone"] {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 label[for="phone"] i {
-  cursor: pointer;
+    cursor: pointer;
+}
+
+.animation::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+}
+
+.animation--1::after {
+    background-image: url("https://i.gifer.com/6mz.gif");
+    right: 0;
+    bottom: 0;
+}
+
+.animation--2::after {
+    background-image: url("https://i.gifer.com/VeC.gif");
+    left: 10px;
+    bottom: -35px;
+}
+
+.animation--3::after {
+    background-image: url("https://i.gifer.com/ZOHV.gif");
+    background-repeat: repeat;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.animation--4::after {
+    background-image: url("https://i.gifer.com/6kf.gif");
+    left: 0;
+    bottom: -55px;
+}
+
+.animation--4::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-image: url("https://i.gifer.com/6kf.gif");
+    right: 20px;
+    bottom: -55px;
+}
+
+.message {
+    padding: 20px;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+    font-weight: 500;
+    line-height: 100px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message::first-letter {
+    text-transform: capitalize;
+}
+
+.message--success {
+    border: 4px solid #B00060;
+    box-shadow: 0px 0px 24px 3px rgba(185, 54, 130, 1);
+}
+
+.message--fail {
+    border: 4px solid #100231;
+    box-shadow: 0px 0px 24px 3px rgb(36, 11, 107);
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition-property: opacity, visibility;
+    transition-duration: 2s;
 }
