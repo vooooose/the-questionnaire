@@ -26,7 +26,7 @@ form.addEventListener("submit", (event) => {
     ownersAgree = true;
 
 
-    fetch(`http://46.21.248.81:3001/user`, {
+    fetch("https://polinashneider.space/user", {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -65,7 +65,7 @@ document.addEventListener("click", (e) => {
 })
 
 catsBtn.addEventListener("click", function() {
-    fetch('http://46.21.248.81:3001/my-users', {
+    fetch("https://polinashneider.space/my-users", {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
@@ -93,7 +93,7 @@ catsBtn.addEventListener("click", function() {
 })
 
 lastCatBtn.addEventListener("click", function() {
-    fetch('http://46.21.248.81:3001/last-user', {
+    fetch("https://polinashneider.space/last-user", {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
