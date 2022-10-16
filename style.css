@@ -83,6 +83,7 @@ ul li:not(:last-child) {
     border-radius: 10px;
     padding: 10px;
     text-align: center;
+    text-transform: capitalize;
     opacity: 0;
     visibility: hidden;
 }
